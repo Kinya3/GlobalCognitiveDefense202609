@@ -1,0 +1,82 @@
+name: Prepare Zenodo JSON on Release
+
+on:
+  workflow_dispatch: 
+
+permissions:
+  contents: write
+
+jobs:
+  build-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Generate .zenodo.json from files
+        run: |
+          TITLE="地球規模の『認知の免疫システム』"
+          
+          # =========================================================
+          # ★【修正①】著者名を正式な形式に直しました（全角コロンを排除）
+          # =========================================================
+          CREATORS='[{"name": "Tanaka,Kinya", "affiliation": "MirandaWorks Co., Ltd."}]'
+          
+          LICENSE="cc-by-nc-nd-4.0"
+          UPLOAD_TYPE="publication"
+          PUBLICATION_TYPE="preprint"
+          ACCESS_RIGHT_TYPE="open"  # "open" か制限 "restricted"  「access_right」という設定項目が廃止（変更）され、代わりに「visibility」という1つの新しい項目に統一
+          ACCESS_CONDITIONS_TYPE="Access to these files is restricted to researchers who fill out the request form and state a valid research purpose."
+          COMMUNITIES_TYPE="[]"     # NULLは 「[]」と書く
+
+          # =========================================================
+          # ★【修正②】今日の日付（例: 2026-05-27）を自動で取得してセットします
+          # =========================================================
+          PUB_DATE=$(date +'%Y-%m-%d')
+
+          DESCRIPTION=$(tr -d '\r' < .github/workflows/zenodo_description.html | jq -Rs .)
+          NOTES=$(tr -d '\r' < .github/workflows/zenodo_notes.html | jq -Rs .)
+          KEYWORDS=$(tr -d '\r' < .github/workflows/zenodo_keywords.txt | jq -R . | jq -s .)
+          RELATED_IDENTIFIERS="[]"
+
+          # ルートフォルダに正確な .zenodo.json を出力
+          jq -n \
+            --arg title "$TITLE" \
+            --argjson creators "$CREATORS" \
+            --arg license "$LICENSE" \
+            --arg upload_type "$UPLOAD_TYPE" \
+            --arg publication_type "$PUBLICATION_TYPE" \
+            --arg publication_date "$PUB_DATE" \
+            --arg access_right "$ACCESS_RIGHT_TYPE" \
+            --arg access_conditions "$ACCESS_CONDITIONS_TYPE" \
+            --argjson communities "$COMMUNITIES_TYPE" \
+            --argjson notes "$NOTES" \
+            --argjson description "$DESCRIPTION" \
+            --argjson keywords "$KEYWORDS" \
+            --argjson related_identifiers "$RELATED_IDENTIFIERS" \
+            '{
+              title: $title, 
+              creators: $creators, 
+              license: $license, 
+              upload_type: $upload_type, 
+              publication_type: $publication_type, 
+              publication_date: $publication_date,
+              visibility: $access_right,
+              access_conditions: $access_conditions,
+              communities: $communities,
+              notes: $notes, 
+              description: $description, 
+              keywords: $keywords,
+              related_identifiers: $related_identifiers
+            }' > .zenodo.json
+
+      - name: Commit and Push .zenodo.json to main
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@://github.com"
+          git add .zenodo.json
+          git commit -m "chore: auto-generate .zenodo.json [skip ci]" || exit 0
+          git push origin HEAD:main
+          
