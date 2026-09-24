@@ -51,7 +51,7 @@ To preserve fidelity against translation loss, the Japanese text remains the pri
 ## 📚 参考文献 (References)
 本研究の基盤となった主要な文献です。
 
-- 前提論文シリーズ , ヒトの非論理的思考における多層的無意識プロセスの分類、および二重過程理論と神経ネットワークの統合的マッピング（2026年時点）
+- 前提論文 , 
 
 
 
