@@ -1,8 +1,14 @@
 # Global Cognitive Defense (GCD) Paper Series
 ## 地球規模の『認知の免疫システム』GCD論文シリーズ
 
-[![License: CC BY-NC-ND 4.0](https://shields.io)](https://creativecommons.org)
-[![DOI：10.5281/zenodo.22945206](https://zenodo.org)](https://doi.org)
+<p>
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License: CC BY-NC-ND 4.0">
+  </a>
+ <a href="https://doi.org/10.5281/zenodo.22945206">    <img src="https://zenodo.org/badge/1367132471.svg" alt="DOI：10.5281/zenodo.22945206">
+  </a>
+  <br>
+</p>
 
 ---
 
@@ -129,9 +135,14 @@ Global Cognitive Defense (GCD), PISA Level 3, PIAAC Level 3, SEL Level 3, 構造
 # Global Cognitive Defense (GCD) Paper Series
 ## Building a Planetary-Scale "Cognitive Immune System"
 
-[![License: CC BY-NC-ND 4.0](https://shields.io)](https://creativecommons.org)
-[![DOI: 10.5281/zenodo.22945206](https://zenodo.org)](https://doi.org)
-
+<p>
+  <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg" alt="License: CC BY-NC-ND 4.0">
+  </a>
+ <a href="https://doi.org/10.5281/zenodo.22945206">    <img src="https://zenodo.org/badge/1367132471.svg" alt="DOI：10.5281/zenodo.22945206">
+  </a>
+  <br>
+</p>
 ---
 
 **Protecting Lifelong Cognition at Age 15: A Global Cognitive Defense from PISA to PIAAC**  
