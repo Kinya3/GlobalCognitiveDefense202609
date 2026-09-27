@@ -1,3 +1,5 @@
+Global Cognitive Defense
+GCD
 認知科学
 Cognitive Science
 脳神経科学
@@ -9,13 +11,35 @@ Developmental Clinical Psychology
 統計数理
 Mathematical Statistics
 政治学・民主主義論
-Political Theory & Deliberative Democracy
+Political Theory
+Deliberative Democracy
 行動経済学
 Behavioral Economics
 人工知能・情報倫理
-AI Ethics & Information Security
+Information Security
 政策立案・行政学
-Public Policy & Administration
+PISA
+PIAAC
+SEL
+PISA Level 3
+PIAAC Level 3
+SEL Level 3
+構造的読解力
+批判的読解力
+認知の防壁
+認知的公共インフラ
+認知的テラフォーミング
+確率的選好モデル
+耐障害性社会設計
+奪取閾値の非対称性
+制度の二軌道化
+Dual-Track Legislative System
+脳の主権
+認知安全保障
+Sybil Attack無効化
+100年ロードマップ
+Public Policy
+Public Administration
 Dual-Process Theory
 Cognitive Neuroscience
 Large-Scale Brain Networks
@@ -56,3 +80,7 @@ Experimental Design
 脳腸相関
 身体性知能
 人工知能比較
+ジョン・ハッティ
+John Hattie
+ダニエル・カーネマン
+Daniel Kahneman
