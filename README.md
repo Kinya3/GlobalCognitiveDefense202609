@@ -132,6 +132,15 @@ Global Cognitive Defense (GCD), PISA Level 3, PIAAC Level 3, SEL Level 3, 構造
 
 ---
 
+【Notes on Fidelity / 記述の真実性に関する注釈】
+本論文の論理的整合性は、出力されたPDFにおいて確定される。
+また、翻訳の網目による情報の劣化を避けるため、解釈に相違が生じた場合は
+日本文の記述を原本(正)とする。
+The logical integrity of this work is finalized in the output PDF .
+To prevent information loss inherent in translation, the Japanese text shall
+serve as the primary authority in the event of any interpretive discrepancy.
+
+
 # Global Cognitive Defense (GCD) Paper Series
 ## Building a Planetary-Scale "Cognitive Immune System"
 
@@ -258,7 +267,7 @@ While widely welcoming the open dissemination, reference, and citation of these 
 ### [Author and Feedback]
 
 **Author:** Kinya Tanaka: IT Adventurer
-
+---
 *"It is my sincere hope that this framework will open the metaphysical realm to the physical, everyday world, leaving no one behind, serving as a reliable tool to sustain tomorrow's daily life, and helping us—imperfect as we are—to resonate with one another in a healthy and harmonious manner."*
 
 
